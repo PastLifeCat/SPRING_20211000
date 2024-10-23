@@ -11,7 +11,7 @@ import com.example.demo.model.service.TestService;
 public class DemoController {
 
     @Autowired // 객체 주입 자동화
-    private TestService testService;
+    TestService testService; // DemoController 클래스 아래 객체 생성
 
     @GetMapping("/hello") // 전송 방식 GET
         public String hello(Model model) {
@@ -40,6 +40,14 @@ public class DemoController {
         TestDB test = testService.findByName("홍길동");
         model.addAttribute("data4", test);
         System.out.println("데이터 출력 디버그 : " + test);
+
+        TestDB test2 = testService.findByName("아저씨");
+        model.addAttribute("data5", test2);
+        System.out.println("데이터 출력 디버그 : " + test2);
+
+        TestDB test3 = testService.findByName("꾸러기");
+        model.addAttribute("data6", test3);
+        System.out.println("데이터 출력 디버그 : " + test3);
         return "testdb";
     }
 } 
