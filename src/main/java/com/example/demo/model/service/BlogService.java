@@ -9,7 +9,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.model.domain.Board;
-import com.example.demo.model.domain.Article;
 import com.example.demo.model.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 
